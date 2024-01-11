@@ -14,9 +14,8 @@
     aspect-ratio: 1;
     border: 1px solid #ccc;
     cursor: pointer;
+    background-color: azure;
 }
 
-.coloring {
-    background-color: #0eecfc;
-}
+
 

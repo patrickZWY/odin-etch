@@ -14,7 +14,7 @@ function createGrid(size) {
     const container = document.getElementById('grids-container');
     container.innerHTML = '';
 
-    for (let index = 0; index < (size * size); index++) {
+    for (let index = 0; index < size; index++) {
         const row = document.createElement('div');
         row.classList.add('grid-row');
         
@@ -22,8 +22,8 @@ function createGrid(size) {
             const gridItem = document.createElement('div');
             gridItem.classList.add('grid-item');
 
-            gridItem.addEventListener('mouseover', function() {
-                this.classList.add('coloring');
+            gridItem.addEventListener('mouseover', function() {``
+                gridItem.style.backgroundColor = random_color();
             });
 
             row.appendChild(gridItem);
@@ -31,4 +31,11 @@ function createGrid(size) {
         
         container.appendChild(row);
     }
+}
+
+function random_color() {
+    const range = 255;
+    let random = Math.random;
+    let rounding = Math.round;
+    return 'rgba(' + rounding(random()*range) + ',' + rounding(random()*range) + ',' + rounding(random()*range) + ','  + random().toFixed(1) + ')';
 }
