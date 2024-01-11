@@ -1,0 +1,22 @@
+#grids-container {
+    width: 960px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #0f0d0d
+
+}
+.grid-row {
+    display: flex;
+}
+.grid-item {
+    flex: 1;
+    aspect-ratio: 1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.coloring {
+    background-color: #0eecfc;
+}
+
